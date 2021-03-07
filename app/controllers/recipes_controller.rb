@@ -20,6 +20,25 @@ class RecipesController < ApplicationController
     end
   end
 
+  def edit
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+    if @recipe.update(recipe_params)
+      redirect_to @recipe, notice: "Recipe successfully updated!"
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    redirect_to recipes_url, notice: 'Movie successfully deleted.'
+  end
+
   private
 
   def recipe_params

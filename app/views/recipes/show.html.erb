@@ -9,3 +9,9 @@
     <td><%= @recipe.instructions %></td>
   </tr>
 </table>
+<p>
+  <%= link_to 'Edit', edit_recipe_path(@recipe) %>
+  <%= link_to 'Delete', @recipe, method: :delete, data: {
+    confirm: "Are you sure you want to delete #{@recipe.name}?"
+  } %>
+</p>
