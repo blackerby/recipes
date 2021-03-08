@@ -1,17 +1,26 @@
 <%= form_with model: @recipe, local: true do |f| %>
-  <p>
-  <%= f.label :name %>
-  <%= f.text_field :name, autofocus: true %>
-  </p>
-  <p>
-  <%= f.label :ingredients %>
-  <%= f.text_field :ingredients %>
-  </p>
-  <p>
-  <%= f.label :instructions %>
-  <%= f.text_area :instructions %>
-  </p>
-  <p>
+  <div class="mb-3">
+    <%= f.label :name, class: "form-label" %>
+    <%= f.text_field :name, class: "form-control", autofocus: true %>
+  </div>
+
+ <div class="mb-3">
+    <%= f.label :ingredients, class: "form-label" %>
+    <%= f.text_area :ingredients, class: "form-control" %>
+</div>
+
+ <div class="mb-3">
+  <%= f.label :instructions, class: "form-label" %>
+  <%= f.text_area :instructions, class: "form-control" %>
+</div>
+
+ <div class="mb-3">
+  <%= f.label :link, class: "form-label" %>
+  <%= f.text_field :url, class: "form-control" %>
+</div>
+
+ <div class="mb-3">
   <%= f.submit %>
-  </p>
+</div>
+  
 <% end %>

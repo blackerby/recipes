@@ -1,19 +1,2 @@
 <h1>Create a New Recipe</h1>
-
-<%= form_with model: @recipe, local: true do |f| %>
-  <p>
-  <%= f.label :name %>
-  <%= f.text_field :name, autofocus: true %>
-  </p>
-  <p>
-  <%= f.label :ingredients %>
-  <%= f.text_field :ingredients %>
-  </p>
-  <p>
-  <%= f.label :instructions %>
-  <%= f.text_area :instructions %>
-  </p>
-  <p>
-  <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'form' %>
