@@ -7,7 +7,7 @@
 <p><%= simple_format(@recipe.instructions) %></p>
 
 <h3>Source:</h3>
-<p><%= link_to @recipe.url, @recipe.url, target: :_blank, rel: :noopener %></p>
+<p><%= link_to @recipe.source_url, @recipe.source_url, target: :_blank, rel: :noopener %></p>
 <p>
   <%= link_to 'Edit', edit_recipe_path(@recipe) %>
   <%= link_to 'Delete', @recipe, method: :delete, data: {

@@ -35,13 +35,13 @@ class RecipesController < ApplicationController
 
   def destroy
     @recipe.destroy
-    redirect_to recipes_url, notice: 'Movie successfully deleted.'
+    redirect_to recipes_url, notice: 'Recipe successfully deleted.'
   end
 
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :ingredients, :instructions, :url)
+    params.require(:recipe).permit(:name, :ingredients, :instructions, :source_url)
   end
 
   def set_recipe
