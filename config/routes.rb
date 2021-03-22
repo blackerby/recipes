@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
-  root 'recipes#index'
+  root to: 'recipes#index'
   
   resources :recipes
-  resource :session, only: [:new, :create, :destroy]
 end
