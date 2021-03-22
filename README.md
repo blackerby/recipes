@@ -2,6 +2,6 @@
 
 TODO:
 
-* Add user registration functionality
-
 * Add Ingredient model and association with Recipe
+
+* Investigate devise_invitable for inclusion into this project
